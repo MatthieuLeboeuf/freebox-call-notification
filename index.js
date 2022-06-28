@@ -49,10 +49,10 @@ else {
         console.log(`une erreur est survenue : ${session.data.error_code}`);
         process.exit(1);
     }
-    const session_token = session.data.result.session_token;
+    console.log('Started');
     let latest = 0;
     setInterval(async () => {
-        const calls = await client.get('/call/log/', { headers: { 'X-Fbx-App-Auth': session_token } });
+        const calls = await client.get('/call/log/', { headers: { 'X-Fbx-App-Auth': session.data.result.session_token } });
         if (!calls.data.success) {
             console.log(`une erreur est survenue : ${track.data.error_code}`);
             process.exit(1);
