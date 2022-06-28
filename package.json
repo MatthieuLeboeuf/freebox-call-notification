@@ -1,0 +1,16 @@
+{
+  "name": "freebox-call-notification",
+  "version": "1.0.0",
+  "description": "FreeboxCallNotification",
+  "main": "index.js",
+  "repository": "https://github.com/MatthieuLeboeuf/freebox-call-notification",
+  "author": "Matthieu Leboeuf <contact@matthieul.dev>",
+  "license": "MIT",
+  "private": false,
+  "type": "module",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "crypto": "^1.0.1",
+    "dotenv": "^16.0.1"
+  }
+}
