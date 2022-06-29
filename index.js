@@ -57,7 +57,7 @@ else {
             console.log(`une erreur est survenue : ${track.data.error_code}`);
             process.exit(1);
         }
-        if (calls.data.result[0].duration === 0 && calls.data.result[0].id !== latest) {
+        if (calls.data.result[0].duration === 0 && calls.data.result[0].id !== latest && calls.data.result[0].type === 'accepted') {
             latest = calls.data.result[0].id;
             await axios.post(`https://api.telegram.org/bot${process.env.TELEGRAM_BOT_TOKEN}/sendMessage`, {
                 'chat_id': process.env.TELEGRAM_CHAT_ID,
