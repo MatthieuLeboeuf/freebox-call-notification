@@ -64,5 +64,5 @@ else {
                 'text': `Appel entrant de ${calls.data.result[0].name}`,
             });
         }
-    }, 5000);
+    }, 2000);
 }
